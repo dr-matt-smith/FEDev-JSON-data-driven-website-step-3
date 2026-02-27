@@ -1,5 +1,8 @@
 <!--<script>-->
-<!--    export let params;-->
+<!--// export let params;  << $app/state is now the recommended method to access page parameters-->
+<!--import { page } from '$app/state';-->
+<!--let params = page.params;-->
+
 <!--    let moduleCode = params.modulecode-->
 <!--</script>-->
 
@@ -27,7 +30,10 @@
 <!--{/if}-->
 
 <script>
-    export let params;
+    // export let params;  << $app/state is now the recommended method to access page parameters
+    import { page } from '$app/state';
+    let params = page.params;
+
     let moduleCode = params.modulecode;
 
     // default to unknown module code
